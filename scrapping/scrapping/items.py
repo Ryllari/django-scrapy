@@ -5,10 +5,13 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy_djangoitem import DjangoItem
+from app.models import BlogPost
 
 
-class ScrappingItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class BlogPostItem(DjangoItem):
+    """
+    Define a item based on django model BlogPost
+    """
+    django_model = BlogPost
+    
