@@ -34,7 +34,7 @@ class WattPanelSpider(scrapy.Spider):
             item['posted_at'] = article.xpath(
                 './/time[@class="entry-date published"]/@datetime'
                 ).extract_first()
-            text_xpath = './/div[@class="entry-content"]/p/'
+            text_xpath = './/div[@class="entry-content"]/p'
 
             item['short_text'] = ''.join(
                 [text for text in article.xpath(text_xpath).extract()]
