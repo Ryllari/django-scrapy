@@ -1,0 +1,17 @@
+.header {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.content {
+    margin: 5% 10%;
+}
+
+.content > h3 {
+    font-size: 1.625rem;
+    margin-bottom: 0;
+}
+
+.content .posted-at {
+    color: #666;
+}

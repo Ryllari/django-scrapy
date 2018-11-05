@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    </head>
+    <body>
+        <div class="header">
+            <h1 >BLOG POSTS</h1>
+        </div>
+        <div class="content">
+        {% for object in object_list %}    
+            <h3>{{object.title}}</h3> 
+            <span class="posted-at">{{object.posted_at}}</span>
+            <p>{{object.short_text|safe}}</p>
+        {% endfor %}
+        </div>
+    </body>
+</html>
